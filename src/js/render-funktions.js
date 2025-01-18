@@ -9,7 +9,7 @@ export const galleryFn = ImgInfo => {
   return ImgInfo.map(el => {
     return `<li class="card">
     <a class="lagre-foto" href="${el.largeImageURL}">
-    <img src='${el.webformatURL}' alt='${el.tags}' width='360' height='160'>
+    <img class="photo" src='${el.webformatURL}' alt='${el.tags}' width='360' height='160'>
     </a>
     <div class="text">
     <p class="tags">Likes<span class="positions">${el.likes}</span></p>

@@ -29,6 +29,7 @@ form.addEventListener('submit', event => {
         });
         return;
     } 
+
     loader.classList.remove('is-hidden');
         fetchImages(valueInput)
         .then(data => {
@@ -45,7 +46,7 @@ form.addEventListener('submit', event => {
                 });
                return;
             }
-            
+
            const markup = galleryFn(data.hits);
             ul.innerHTML = markup;
         
@@ -68,9 +69,7 @@ form.addEventListener('submit', event => {
         })
         .finally(()=> {
             loader.classList.add('is-hidden');
-            loader.style.display = 'none';
         });
         form.reset();
-
 
     })
