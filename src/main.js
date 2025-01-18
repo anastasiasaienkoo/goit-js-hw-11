@@ -29,7 +29,7 @@ form.addEventListener('submit', event => {
         });
         return;
     } 
-        loader.classList.remove('is-hidden');
+    loader.classList.remove('is-hidden');
         fetchImages(valueInput)
         .then(data => {
             if(data.hits.length === 0){
@@ -73,4 +73,4 @@ form.addEventListener('submit', event => {
         form.reset();
 
 
-})
+    })
