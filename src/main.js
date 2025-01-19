@@ -30,6 +30,7 @@ form.addEventListener('submit', event => {
         return;
     } 
 
+
     loader.classList.remove('is-hidden');
         fetchImages(valueInput)
         .then(data => {
@@ -57,7 +58,7 @@ form.addEventListener('submit', event => {
                 maxZoom: 0, // вбирає зум
                 scrollZoom: false, //вбирає скрол мишою
             });
-            simplebox.refresh()
+            simplebox.refresh();
 })
         .catch(error => {
             loader.style.display = 'none';
@@ -71,5 +72,5 @@ form.addEventListener('submit', event => {
             loader.classList.add('is-hidden');
         });
         form.reset();
-
+        gallery.innerHTML = '';
     })

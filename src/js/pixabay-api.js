@@ -10,6 +10,7 @@ const gallery =  document.querySelector('.gallery');
 
 
 
+
 export function fetchImages(value){
  return fetch(`https://pixabay.com/api/?key=47906574-737e3153d4e9e6f9b55134ae6&q=${value}&image_type=photo&orientation=horizontal&safesearch=true&per_page=15`)
 .then(response => {
